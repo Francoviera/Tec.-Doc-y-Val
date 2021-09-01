@@ -1,4 +1,4 @@
-package restaurant;
+package PracticoIII;
 import java.util.Date;
 
 public class Usuario {
@@ -9,6 +9,13 @@ int tipoUsuario;
 float saldoCuenta;
 Date ultimaRecarga;
 String email;
+/**
+ * cosntructor de usuario
+ * @param nombreYApellido
+ * @param tipoUsuario
+ * @param saldoCuenta
+ * @param email
+ */
 public Usuario(String nombreYApellido, int tipoUsuario, float saldoCuenta,String email) {
 	super();
 	this.nombreYApellido = nombreYApellido;
@@ -16,11 +23,20 @@ public Usuario(String nombreYApellido, int tipoUsuario, float saldoCuenta,String
 	this.saldoCuenta = saldoCuenta;
 	this.email=email;
 }
-
+/**
+ * carga credito en la cuenta del usuario
+ * @param cuanto
+ */
 public void cargarCredito(float cuanto) {
 	saldoCuenta+=cuanto;
 	
 }
+/**
+ * descuenta el saldo de la cuenta del usuario
+ * @param cuanto
+ * @return
+ * @throws SinSaldoException
+ */
 float descontarSaldo(float cuanto) throws SinSaldoException {
 	if((saldoCuenta-cuanto)<0) throw new SinSaldoException();
 	else

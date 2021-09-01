@@ -1,4 +1,4 @@
-package restaurant;
+package PracticoIII;
 
 public class SinSuficientesIngredientesException extends Exception {
 

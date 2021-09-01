@@ -1,4 +1,4 @@
-package restaurant;
+package PracticoIII;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +12,11 @@ public AdminOrdenes() {
 void procesar() {
 	 
 }
+/**
+ * agrega el pedido
+ * @param p
+ * @return
+ */
 int agregar(Pedido p)  {
 	p.setEstado("ENCARGADO");
 	pedidos.add(p);
